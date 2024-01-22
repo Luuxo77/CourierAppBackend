@@ -76,7 +76,7 @@ public class DbOffersRepository(CourierAppContext context, IAddressesRepository 
         {
             Inquiry = inquiry,
             CreationDate = DateTime.UtcNow,
-            ExpireDate = DateTime.UtcNow.AddHours(6),
+            ExpireDate = DateTime.UtcNow.AddHours(2),
             UpdateDate = DateTime.UtcNow,
             Status = OfferStatus.Offered,
             Price = priceCalculator.CalculatePrice(inquiry)
