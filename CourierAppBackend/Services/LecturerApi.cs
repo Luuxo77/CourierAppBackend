@@ -77,6 +77,7 @@ public class LecturerAPI(IOptions<LecturerAPIOptions> options)
             Email = customerInfoDTO.Email,
             Address = new()
             {
+                Street = customerInfoDTO.Address.Street,
                 HouseNumber = customerInfoDTO.Address.HouseNumber,
                 ApartmentNumber = customerInfoDTO.Address.ApartmentNumber,
                 City = customerInfoDTO.Address.City,
@@ -124,7 +125,7 @@ public class LecturerAPI(IOptions<LecturerAPIOptions> options)
             }
             else
             {
-                return null;
+                return new() { OfferStatus = "Not ready yet" };
             }
         }
         string offerId = offer.OfferID;
