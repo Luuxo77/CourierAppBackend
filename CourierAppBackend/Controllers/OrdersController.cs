@@ -47,15 +47,4 @@ public class OrdersController(IOrdersRepository ordersRepository)
         var order = await ordersRepository.UpdateOrder(id, orderUpdate);
         return order is null ? NotFound() : Ok(order);
     }
-
-    [HttpPost("test")]
-    public IActionResult Test()
-    {
-        return Ok();
-    }
-
-
-    
-
 }
-
